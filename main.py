@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Google Sheets API setup
 scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_file("/home/runner/.config/credentials.json", scopes=scopes)  # Updated path
+creds = Credentials.from_service_account_file("credentials.json", scopes=scopes)
 client = gspread.authorize(creds)
 
 sheet_id = "1m4BktefQ3vCY3NtOhWoLc7rb9aKOMJXKR_qwAjo15oE"
