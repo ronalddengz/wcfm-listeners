@@ -1,0 +1,28 @@
+name: Run Python script every 15 minutes
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # Runs every 15 minutes
+
+jobs:
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Specify the Python version you want to use
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4 gspread google-auth  # Install required packages
+
+      - name: Run Python script
+        run: |
+          mkdir -p ~/.config  # Create a config directory for credentials
+          echo "${{ secrets.GOOGLE_SHEETS_CREDENTIALS }}" > ~/.config/credentials.json  # Load credentials from secrets
+          python main.py
