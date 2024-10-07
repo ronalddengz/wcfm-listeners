@@ -2,7 +2,7 @@ name: Run Python script every 5 minutes
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs every 5 minutes
+     - cron: '*/5 * * * *'  # Runs every 5 minutes
   workflow_dispatch:  # This allows manual triggering of the workflow
 
 jobs:
