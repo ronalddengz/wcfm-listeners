@@ -24,17 +24,5 @@ jobs:
           CREDENTIALS_JSON: ${{ secrets.CREDENTIALS_JSON }}
         run: |
           echo "$CREDENTIALS_JSON" > credentials.json
-      - name: Debug - List directory contents
-        run: |
-          echo "Current directory contents:"
-          ls -la
-      - name: Debug - Check credentials file
-        run: |
-          echo "Credentials file exists:"
-          test -f credentials.json && echo "Yes" || echo "No"
-          echo "Credentials file size:"
-          wc -c credentials.json || echo "File not found"
-          echo "First few lines of credentials file (be careful not to expose sensitive data):"
-          head -n 3 credentials.json
       - name: Run Python script
         run: python main.py
