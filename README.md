@@ -1,6 +1,6 @@
 # 📻 WCFM Listener Stats
 
-This project was created just for fun to record the number of people listening to **91.9 WCFM Williamstown** every few minutes (allegedly). 
+This project was created just for fun to record the number of people listening to **91.9 WCFM Williamstown** every once in a while. 
 
 ---
 Find the stats [here](https://docs.google.com/spreadsheets/d/1m4BktefQ3vCY3NtOhWoLc7rb9aKOMJXKR_qwAjo15oE/edit?usp=sharing).
